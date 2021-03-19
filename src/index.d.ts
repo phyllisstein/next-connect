@@ -26,83 +26,83 @@ declare module "next-connect" {
     (req: Req, res: Res): Promise<void>;
 
     use<ReqExt = {}, ResExt = {}>(
-      ...handlers: Middleware<Req & ReqExt, Res & ResExt>[]
+      ...handlers: Middleware<ReqExt & Req, ResExt & Res>[]
     ): this;
     use<ReqExt = {}, ResExt = {}>(
       pattern: string | RegExp,
-      ...handlers: Middleware<Req & ReqExt, Res & ResExt>[]
+      ...handlers: Middleware<ReqExt & Req, ResExt & Res>[]
     ): this;
 
     all<ReqExt = {}, ResExt = {}>(
-      ...handlers: RequestHandler<Req & ReqExt, Res & ResExt>[]
+      ...handlers: RequestHandler<ReqExt & Req, ResExt & Res>[]
     ): this;
     all<ReqExt = {}, ResExt = {}>(
       pattern: string | RegExp,
-      ...handlers: RequestHandler<Req & ReqExt, Res & ResExt>[]
+      ...handlers: RequestHandler<ReqExt & Req, ResExt & Res>[]
     ): this;
 
     get<ReqExt = {}, ResExt = {}>(
-      ...handlers: RequestHandler<Req & ReqExt, Res & ResExt>[]
+      ...handlers: RequestHandler<ReqExt & Req, ResExt & Res>[]
     ): this;
     get<ReqExt = {}, ResExt = {}>(
       pattern: string | RegExp,
-      ...handlers: RequestHandler<Req & ReqExt, Res & ResExt>[]
+      ...handlers: RequestHandler<ReqExt & Req, ResExt & Res>[]
     ): this;
 
     head<ReqExt = {}, ResExt = {}>(
-      ...handlers: RequestHandler<Req & ReqExt, Res & ResExt>[]
+      ...handlers: RequestHandler<ReqExt & Req, ResExt & Res>[]
     ): this;
     head<ReqExt = {}, ResExt = {}>(
       pattern: string | RegExp,
-      ...handlers: RequestHandler<Req & ReqExt, Res & ResExt>[]
+      ...handlers: RequestHandler<ReqExt & Req, ResExt & Res>[]
     ): this;
 
     post<ReqExt = {}, ResExt = {}>(
-      ...handlers: RequestHandler<Req & ReqExt, Res & ResExt>[]
+      ...handlers: RequestHandler<ReqExt & Req, ResExt & Res>[]
     ): this;
     post<ReqExt = {}, ResExt = {}>(
       pattern: string | RegExp,
-      ...handlers: RequestHandler<Req & ReqExt, Res & ResExt>[]
+      ...handlers: RequestHandler<ReqExt & Req, ResExt & Res>[]
     ): this;
 
     put<ReqExt = {}, ResExt = {}>(
-      ...handlers: RequestHandler<Req & ReqExt, Res & ResExt>[]
+      ...handlers: RequestHandler<ReqExt & Req, ResExt & Res>[]
     ): this;
     put<ReqExt = {}, ResExt = {}>(
       pattern: string | RegExp,
-      ...handlers: RequestHandler<Req & ReqExt, Res & ResExt>[]
+      ...handlers: RequestHandler<ReqExt & Req, ResExt & Res>[]
     ): this;
 
     delete<ReqExt = {}, ResExt = {}>(
-      ...handlers: RequestHandler<Req & ReqExt, Res & ResExt>[]
+      ...handlers: RequestHandler<ReqExt & Req, ResExt & Res>[]
     ): this;
     delete<ReqExt = {}, ResExt = {}>(
       pattern: string | RegExp,
-      ...handlers: RequestHandler<Req & ReqExt, Res & ResExt>[]
+      ...handlers: RequestHandler<ReqExt & Req, ResExt & Res>[]
     ): this;
 
     options<ReqExt = {}, ResExt = {}>(
-      ...handlers: RequestHandler<Req & ReqExt, Res & ResExt>[]
+      ...handlers: RequestHandler<ReqExt & Req, ResExt & Res>[]
     ): this;
     options<ReqExt = {}, ResExt = {}>(
       pattern: string | RegExp,
-      ...handlers: RequestHandler<Req & ReqExt, Res & ResExt>[]
+      ...handlers: RequestHandler<ReqExt & Req, ResExt & Res>[]
     ): this;
 
     trace<ReqExt = {}, ResExt = {}>(
-      ...handlers: RequestHandler<Req & ReqExt, Res & ResExt>[]
+      ...handlers: RequestHandler<ReqExt & Req, ResExt & Res>[]
     ): this;
     trace<ReqExt = {}, ResExt = {}>(
       pattern: string | RegExp,
-      ...handlers: RequestHandler<Req & ReqExt, Res & ResExt>[]
+      ...handlers: RequestHandler<ReqExt & Req, ResExt & Res>[]
     ): this;
 
     patch<ReqExt = {}, ResExt = {}>(
-      ...handlers: RequestHandler<Req & ReqExt, Res & ResExt>[]
+      ...handlers: RequestHandler<ReqExt & Req, ResExt & Res>[]
     ): this;
     patch<ReqExt = {}, ResExt = {}>(
       pattern: string | RegExp,
-      ...handlers: RequestHandler<Req & ReqExt, Res & ResExt>[]
+      ...handlers: RequestHandler<ReqExt & Req, ResExt & Res>[]
     ): this;
 
     run(req: Req, res: Res): Promise<void>;
